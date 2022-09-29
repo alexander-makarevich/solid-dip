@@ -5,13 +5,15 @@ export class ProxyTftpClient implements ITftpClient {
     tftpClient: ITftpClient = new TftpClient();
 
     put(fname: string, ftext: string) {
-        console.log(`${TftpClient.name}.${this.put.name}('${fname}', '${ftext}') called`);
+        console.log(`${ProxyTftpClient.name}.${this.put.name}`
+            +`('${fname}', '${ftext}') called`);
         this.tftpClient.put(fname, ftext);
     }
 
     get(fname: string): string {
         const ftext = this.tftpClient.get(fname);
-        console.log(`${TftpClient.name}.${this.put.name}('${fname}'): '${ftext}' called`);
+        console.log(`${ProxyTftpClient.name}.${this.put.name}`
+            +`('${fname}'): '${ftext}' called`);
         return ftext;
     }
 }
