@@ -1,6 +1,4 @@
-// Import stylesheets
-import './style.css';
+import { Client } from './coupling-1/client';
 
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+const client = new Client();
+client.work();
