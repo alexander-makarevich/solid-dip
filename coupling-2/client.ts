@@ -8,6 +8,6 @@ export class Client {
         const tftpClient = new TftpClient();
         tftpClient.put(this.fname, this.ftext);
         const ftext = tftpClient.get(this.fname);
-        console.log(`> ${this.fname}\n> ${this.ftext}`);
+        console.log(`> ${this.fname}\n> ${ftext}`);
     }
 }
